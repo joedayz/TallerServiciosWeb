@@ -9,7 +9,7 @@ import pe.joedayz.libreria.daos.LibroDAO;
 import pe.joedayz.libreria.modelos.Libro;
 
 
-@WebService
+@WebService  //JAX-WS
 public class ListaLibros {
 
 	
