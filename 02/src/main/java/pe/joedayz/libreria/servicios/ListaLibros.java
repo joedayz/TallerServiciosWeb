@@ -13,7 +13,7 @@ import pe.joedayz.libreria.daos.LibroDAO;
 import pe.joedayz.libreria.modelos.Libro;
 
 
-@WebService
+@WebService  //Contract Last
 public class ListaLibros {
 
 	@WebResult(name="libro")
