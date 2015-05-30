@@ -13,6 +13,7 @@
 		<module>soa-02-client</module>
 		<module>soa-03</module>
 		<module>soa-04-jetty</module>
+		<module>soa-04-jboss</module>
 	</modules>
 
 	<build>
