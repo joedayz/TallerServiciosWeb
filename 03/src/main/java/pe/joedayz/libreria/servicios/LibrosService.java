@@ -1,4 +1,4 @@
-package pe.joedayz.libreria.servicos;
+package pe.joedayz.libreria.servicios;
 
 import java.util.List;
 

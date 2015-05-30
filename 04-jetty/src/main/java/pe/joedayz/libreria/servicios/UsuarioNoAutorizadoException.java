@@ -1,4 +1,4 @@
-package pe.joedayz.libreria.servicos;
+package pe.joedayz.libreria.servicios;
 
 import java.util.Date;
 
@@ -46,8 +46,8 @@ public class UsuarioNoAutorizadoException extends Exception {
 
       private Date fecha;
 
-      public UsuarioFaultInfo(String mensaje) {
-         this.mensaje = mensaje;
+      public UsuarioFaultInfo(String mensagem) {
+         this.mensaje = mensagem;
          this.fecha = new Date();
 
       }

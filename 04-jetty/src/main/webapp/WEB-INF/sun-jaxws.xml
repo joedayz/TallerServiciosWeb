@@ -1,0 +1,8 @@
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">  
+   <endpoint name="libros" 
+      implementation="pe.joedayz.libreria.servicios.LibrosService" 
+      url-pattern="/libros" />
+   <endpoint name="autores" 
+      implementation="pe.joedayz.libreria.servicios.AutoresService" 
+      url-pattern="/autores" />
+</endpoints>
