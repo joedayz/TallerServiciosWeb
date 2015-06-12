@@ -15,7 +15,8 @@ public class CountryClient extends WebServiceGatewaySupport{
 		GetCountryRequest request = new GetCountryRequest();
 		request.setName(countryName);
 		
-		GetCountryResponse response = (GetCountryResponse) getWebServiceTemplate().marshalSendAndReceive(request,
+		GetCountryResponse response = (GetCountryResponse) 
+				getWebServiceTemplate().marshalSendAndReceive(request,
 				new SoapActionCallback(
 						"http://localhost:28080/ws/getCountry"));
 		
