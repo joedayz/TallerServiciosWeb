@@ -33,7 +33,12 @@
 			<scope>test</scope>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxb-provider</artifactId>
+			<version>2.3.2.Final</version>
+			<scope>runtime</scope>
+		</dependency>
 
 
 		<!-- Dependências do servidor JBoss -->

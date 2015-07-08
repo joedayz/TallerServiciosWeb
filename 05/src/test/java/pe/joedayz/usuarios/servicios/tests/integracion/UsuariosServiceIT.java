@@ -35,7 +35,7 @@ public class UsuariosServiceIT {
 	}
 
 	@Test
-	public void testeRecepcaoImagens() throws Exception {
+	public void testeRecepcionImagenes() throws Exception {
 		ClientResponse<byte[]> clientResponse = new ClientRequest(
 				USUARIOS_CONTEXT + "/{id}").pathParameters(1).accept("image/*")
 				.get(byte[].class);
@@ -48,16 +48,16 @@ public class UsuariosServiceIT {
 		String descricao = clientResponse.getHeaders().getFirst(
 				UsuariosServiceInterface.CAMPO_DESCRIPCION_IMAGEN);
 
-		Assert.assertEquals("Alexandre Saudate - 2012", descricao);
+		Assert.assertEquals("Alexandre Saudate", descricao);
 	}
 
 	@Test
-	public void testeCriacaoImagens() throws Exception {
+	public void testCreacionImagenes() throws Exception {
 		ClientResponse<?> clientResponse = new ClientRequest(USUARIOS_CONTEXT
 				+ "/{id}")
 				.pathParameters(1)
 				.header(UsuariosServiceInterface.CAMPO_DESCRIPCION_IMAGEN,
-						"Nova descricao").body("image/png", fotoSaudate).put();
+						"Alexandre Saudate").body("image/png", fotoSaudate).put();
 
 		Assert.assertEquals(204, clientResponse.getStatus());
 
@@ -69,15 +69,15 @@ public class UsuariosServiceIT {
 		Assert.assertEquals(200, status);
 		Assert.assertArrayEquals(fotoSaudate, image);
 
-		String descricao = clientResponse.getHeaders().getFirst(
+		String descripcion = clientResponse.getHeaders().getFirst(
 				UsuariosServiceInterface.CAMPO_DESCRIPCION_IMAGEN);
 
-		Assert.assertEquals("Nova descricao", descricao);
+		Assert.assertEquals("Alexandre Saudate", descripcion);
 
 	}
 
 	@Test
-	public void testeRecepcaoUsuarios() {
+	public void testRecepcionUsuarios() {
 		UsuariosServiceInterface usuariosService = ProxyFactory.create(
 				UsuariosServiceInterface.class, SERVICES_CONTEXT);
 
@@ -95,7 +95,7 @@ public class UsuariosServiceIT {
 	}
 
 	@Test
-	public void testeRecepcaoUsuariosClientRequest() throws Exception {
+	public void testRecepcionUsuariosClientRequest() throws Exception {
 		ClientResponse<Usuario> response = new ClientRequest(USUARIOS_CONTEXT
 				+ "/{id}").pathParameters(1).get(Usuario.class);
 

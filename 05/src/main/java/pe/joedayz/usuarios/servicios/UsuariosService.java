@@ -174,12 +174,11 @@ public class UsuariosService implements UsuariosServiceInterface {
       double numeroUsuariosDouble = numeroUsuarios;
       double tamanhoPaginaDouble = tamanhoPagina;
 
-      // Arrendondamento para cima, para fornecer o número certo de
-      // páginas
+      // Obtener el numero correcto de paginas
       Long numeroPaginas = (long) Math.ceil(numeroUsuariosDouble
             / tamanhoPaginaDouble);
 
-      // O resultado da divisão será um int.
+      // El resultado de la divisi�n sera un int.
       Long paginaAtual = new Long(inicio / tamanhoPagina);
 
       Link linkPrimeiraPagina = new Link(
